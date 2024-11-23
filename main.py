@@ -286,7 +286,7 @@ def signup():
         # Commit the session to the database
         db.session.commit()
         
-        return redirect(url_for('success'))
+        return render_template('signin.html',params=params)
     return render_template('signup.html',params=params)
 
 @app.route('/run_egg', methods=['POST'])
